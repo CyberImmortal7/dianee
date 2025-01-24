@@ -1,0 +1,386 @@
+/* General Body Styling */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation: backgroundGradient 10s infinite;
+}
+
+/* Dynamic Background Animation */
+@keyframes backgroundGradient {
+  0% {
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+  }
+  50% {
+    background: linear-gradient(to right, #ff7eb3, #ffc3a0);
+  }
+  100% {
+    background: linear-gradient(to right, #ffc3a0, #ff758c);
+  }
+}
+
+/* Countdown Timer */
+.countdown {
+  font-size: 1.5rem; /* Increased font size for better visibility */
+  color: #ff758c; /* Kept the white text color */
+  margin-bottom: 20px; /* Provides spacing from elements below */
+  text-align: center; /* Centers the text within the container */
+  animation: fadeIn 2s ease; /* Adds a smooth fade-in effect */
+  background-color: rgba(255, 255, 255, 0.5); /* Adds a subtle background for better contrast */
+  padding: 10px; /* Adds padding for better readability */
+  border-radius: 10px; /* Rounds the corners for a modern look */
+  display: inline-block; /* Prevents it from stretching across the container */
+}
+
+
+/* Valentine Card Styling */
+.valentine-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 40px 30px;
+  max-width: 400px;
+  margin: auto;
+  position: relative;
+  overflow: hidden; /* Add overflow: hidden to clip content within the card */
+}
+
+.title {
+  font-size: 2rem;
+  color: #ff5470;
+  margin-bottom: 15px;
+}
+
+.message {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.yes-button,
+.no-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.yes-button {
+  background-color: #ff5470;
+  color: white;
+}
+
+.no-button {
+  background-color: #ddd;
+  color: #333;
+}
+
+.yes-button:hover {
+  background-color: #ff324e;
+}
+
+.no-button:hover {
+  background-color: #bbb;
+}
+
+.response {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff5470;
+  margin-top: 20px;
+}
+
+
+
+/* Floating Hearts Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+}
+
+.hearts-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.heart {
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ff758c;
+  clip-path: polygon(50% 0%, 61% 12%, 82% 12%, 100% 33%, 100% 59%, 82% 82%, 50% 100%, 18% 82%, 0% 59%, 0% 33%, 18% 12%, 39% 12%);
+  animation: float 5s linear infinite;
+  opacity: 0.8;
+}
+
+.heart:nth-child(2) {
+  width: 25px;
+  height: 25px;
+  animation-duration: 6s;
+  animation-delay: 0.5s;
+}
+
+.heart:nth-child(3) {
+  width: 15px;
+  height: 15px;
+  animation-duration: 4s;
+  animation-delay: 1s;
+}
+
+/* Envelope Animation */
+.envelope {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  margin: 0 auto;
+  transition: transform 1s ease-in-out;
+}
+
+
+/* Diane Image Styling */
+.diane-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.rounded-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 70%;
+  object-fit: cover;
+}
+
+/* Modal Styling */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s ease-in-out; /* Fade-in animation for modal */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+.modal-images {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between images */
+  margin-top: 20px;
+  flex-wrap: wrap; /* Wrap images on smaller screens */
+}
+
+.modal-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  animation: scaleUp 0.5s ease-in-out; /* Scale-up animation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add hover effect to images */
+.modal-image:hover {
+  transform: scale(1.2); /* Scale up the image slightly */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+/* Fade-in animation for modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Scale-up animation for images */
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  /* General Body Styling */
+  body {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  /* Valentine Container */
+  .valentine-container {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 20px 15px;
+    max-width: 90%; /* Reduce card width for smaller screens */
+  }
+
+  .title {
+    font-size: 1.8rem; /* Reduce font size for smaller screens */
+  }
+
+  .message {
+    font-size: 1.2rem; /* Adjust font size for better readability */
+  }
+
+  .countdown {
+    font-size: 1.2rem; /* Reduce font size slightly */
+  }
+
+  /* Buttons */
+  .buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px;
+  }
+
+  .yes-button,
+  .no-button {
+    width: 100%; /* Make buttons full width */
+    padding: 12px;
+  }
+
+  /* Diane Image */
+  .diane-image {
+    margin-bottom: 15px;
+  }
+
+  .rounded-image {
+    width: 120px;
+    height: 120px; /* Adjust size for smaller screens */
+  }
+
+  /* Modal Styling */
+  .modal-content {
+    max-width: 90%; /* Limit modal size on mobile */
+    padding: 15px;
+  }
+
+  .modal-images {
+    gap: 10px; /* Reduce spacing between images */
+  }
+
+  .modal-image {
+    width: 80px;
+    height: 80px; /* Adjust image size */
+  }
+
+  /* Hearts Animation */
+  .heart {
+    width: 15px; /* Smaller hearts for mobile */
+    height: 15px;
+  }
+
+  .heart:nth-child(2) {
+    width: 20px;
+    height: 20px;
+  }
+
+  .heart:nth-child(3) {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* Envelope Animation */
+  .envelope {
+    width: 90%; /* Adjust envelope size */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further Adjustments for Smaller Devices */
+  .card {
+    padding: 15px 10px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .message {
+    font-size: 1rem;
+  }
+
+  .countdown {
+    font-size: 1rem;
+  }
+
+  .rounded-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .modal-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .yes-button,
+  .no-button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
