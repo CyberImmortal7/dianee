@@ -67,7 +67,7 @@ function App() {
         <div className="card">
           {/* Image of Diane */}
           <div className="diane-image">
-            <img src="/assets/diane2.jpg" alt="Diane" className="rounded-image" />
+            <img src="/assets/diane2.JPG" alt="Diane" className="rounded-image" />
           </div>
 
           <h2 className="countdown">Deadline: {timeLeft}</h2>
@@ -104,9 +104,9 @@ function App() {
             <div className="modal-images">
               <img src="/assets/diane1.jpg" alt="Love Image 1" className="modal-image" />
               <br/>
-              <img src="/assets/diane5.jpg" alt="Love Image 2" className="modal-image" />
+              <img src="/assets/diane5.JPG" alt="Love Image 2" className="modal-image" />
               <br/>
-              <img src="/assets/diane6.jpg" alt="Love Image 3" className="modal-image" />
+              <img src="/assets/diane6.JPG" alt="Love Image 3" className="modal-image" />
               <br/>
             </div>
           </div>
