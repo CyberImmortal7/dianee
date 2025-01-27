@@ -104,7 +104,7 @@ function App() {
             <div className="modal-images">
               <img src="/assets/diane1.jpg" alt="Love Image 1" className="modal-image" />
               <br/>
-              <img src="/assets/diane5.JPG" alt="Love Image 2" className="modal-image" />
+              <img src="/assets/dianeee.JPG" alt="Love Image 2" className="modal-image" />
               <br/>
               <img src="/assets/diane6.JPG" alt="Love Image 3" className="modal-image" />
               <br/>
